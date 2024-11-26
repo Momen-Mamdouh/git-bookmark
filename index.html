@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+
+    <link rel="icon" href="./images/bookmark.png">
+
+    <!--?=================================  Bree-Font=================================  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bree+Serif&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!--?=================================  Bree-Font=================================  -->
+
+
+    <!--?=================================  Pacifico-Font=================================  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!--?=================================  Pacifico-Font=================================  -->
+
+
+    <!--?================================= Pt Sans Caption-Font =================================  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <!--?=================================  Pt Sans Caption-Font =================================  -->
+
+    <!--?=================================  Righteous-Font =================================  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!--?=================================  Righteous-Font =================================  -->
+
+    <!--? ================================STYLESHEETS=====================================  -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/bookMarkStyleSheet.css">
+    <!--? ================================STYLESHEETS=====================================  -->
+
+</head>
+
+<body >
+
+<!--*======================START HEADING-SECTION==========================  -->
+    <section class="heading-section  text-center py-5">
+        <div class="container position-relative">
+            <div class="heading-content">
+
+                <h1 class="m-auto mb-5">Bookmarker</h1>
+                <h2 class="pt-5 dashed-line"><i class="fa-solid bookmark-icon  fa-bookmark px-2 "></i> Bookmark your favorite sites
+                    <i class=" fa-solid bookmark-icon  fa-bookmark px-2 "></i></h2> 
+            </div>
+
+        </div>
+    </section>
+<!--*======================END HEADING-SECTION==========================  -->
+
+<!--*======================START INPUTING-SECTION==========================  -->
+    <section class="input-section">
+        <div class="container d-flex flex-column position-relative dashed-line">
+            <label for="site-name"class="mb-2 fw-bold"  ><i class="pe-2 fa-solid fa-book-bookmark"></i>Site Name</label>
+            <div id="checkIdName" class="check-input" ><input  id="site-name" oninput="checkName()"  class="site-name-class form-control mb-4" type="text" placeholder="Bookmark Name"></div>
+
+            <label for="site-url" class="mb-2 fw-bold" ><i class="pe-2 fa-solid fa-link"></i>Site URL</label>
+            <div id="checkIdUrl" class="check-input" ><input id="site-url" oninput="checkUrl()"  class="site-url-class form-control mb-4" type="text" placeholder="Website URL"></div>
+            
+            <div id="changing-btn"  class="m-auto position-relative"><button onclick="addNewProcut()" class="changedButton btn btn-danger  ">Submit</button></div>
+            
+
+        </div>
+    </section>
+<!--*======================END INPUTING-SECTION==========================  -->
+
+
+<!--*======================START DATA-SECTION==========================  -->
+    <section class="data-section py-5">
+            <div class="container">
+                <input oninput="searchForElement(this.value.toLowerCase())" id="search-input" class=" form-control mb-4 w-100 m-auto "  type="search" placeholder="Search">
+                <table class="bg-white m-auto text-center w-100">
+                    <thead>
+                       <tr>
+                        <th class="py-2">index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                       </tr>
+                    </thead>
+
+                    <tbody id="data-rows">
+                      
+
+                    
+                    </tbody>
+                </table>
+            </div>
+    </section>
+<!--*======================END DATA-SECTION==========================  -->
+
+<!--*======================START MODAL==========================  -->
+
+    <dialog class=" box-conent my-modal position-absolute start-0 top-0  border-0 rounded-2">
+      <div>
+        <div class=" box-header  d-flex justify-content-between align-items-center mb-4">
+          <div class="modal-header circles d-flex flex-row border-0">
+            <span class="rounded-circle me-2 "></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+          </div>
+          <button type="button" class="btn border-0 cancel" >
+            <i  class="fa fa-xmark fs-3"></i>
+          </button>
+        </div>
+        <p class="m-0 pb-2 fw-bold">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ol class="rules list-unstyled m-0">
+          <li>
+            <i class="fa-regular text-danger fa-circle-right pe-2"></i>Site name must
+            contain at least 3 characters ex: (Example)
+          </li>
+          <li>
+            <i class="fa-regular text-danger fa-circle-right pe-2"></i>Site URL must be a
+            valid one ex: (https://www.example.com)
+          </li>
+        </ol>
+      </div>
+      
+    </dialog>
+<!--*======================END MODAL==========================  -->
+
+    <!--! ==========================================SCRIPTING==============================  -->
+    <script src="./JS/all.min.js"></script>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/main.js"></script>
+    <!--! ==========================================SCRIPTING==============================  -->
+</body>
+
+</html>
+
+
+
+<!--  
+ -->

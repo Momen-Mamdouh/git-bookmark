@@ -1,0 +1,203 @@
+:root{
+    --bg-color: #F7ECDE;
+    --affecting-color: #FEC260;
+
+    --main-font-color: #212529;
+
+    --heading-font:  "Pacifico", serif;
+    --main-font: "PT Sans Caption", sans-serif;
+    --secondary-heading-font: "Righteous", sans-serif;
+
+    --btn-hover-color: #fff;
+    --btn-bg-hover:#bb4120;
+    --btn-border-hover-color:#a03315;
+
+    --wrong-color: #ff0000;
+    --right-color: #01ff00;
+
+}
+
+
+body{
+    background-color: var(--bg-color);
+    color: var(--main-font-color);
+    font-family: var(--main-font);
+    
+}
+
+.dashed-line::after{
+    content: "";
+    position: absolute;
+    border-bottom: 0.095rem dashed var(--main-font-color);
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 100%;
+}
+
+/**========================== START HEADING-SECTION====================== */
+.heading-content h1{
+    font-family: var(--heading-font);
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    position: relative;
+    width: fit-content;
+    z-index: 99;
+}
+
+.heading-content h1::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 20%;
+    background-color:var(--affecting-color);
+    left: 0;
+    bottom: 3px;
+    z-index: -1;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+}
+
+.heading-content h1:hover:after{
+    height: 60%;
+}
+
+.heading-content h2{
+    font-family: var(--secondary-heading-font);
+    font-size: 1.5rem;
+    background: linear-gradient(to right, green, yellow);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.fa-bookmark{
+    color: #689868;
+    background: linear-gradient(to right, green, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+
+/**========================== END HEADING-SECTION====================== */
+
+
+
+/**========================== START INPUT-SECTION====================== */
+
+.check-input input:focus{
+    border: none;
+    box-shadow: 0 0 10px var(--affecting-color);
+   
+}
+
+.input-section  button{
+    position: relative;
+    z-index: 999;
+    width: fit-content;
+    padding: 9px 48px;
+
+   
+}
+.input-section .dashed-line::after{
+    border-bottom: 0.02rem dashed black;
+    top:80%;
+}
+
+.input-section  button:hover{
+    color: var(--btn-hover-color);
+    background-color: var(--btn-bg-hover);
+    border-color:var(--btn-border-hover-color);
+}
+
+/**========================== END INPUT-SECTION====================== */
+
+
+/**========================== STAR DATA-SECTION====================== */
+
+.data-section input:focus{
+    border: none;
+    box-shadow: 0 0 10px var(--affecting-color);
+   
+}
+/**========================== END DATA-SECTION====================== */
+.input-is-right input:focus{
+    border: none;
+    box-shadow: 0 0 10px var(--right-color) !important;
+}
+
+ .input-is-wrong input:focus{
+    border: none;
+    box-shadow: 0 0 10px var(--wrong-color) !important;
+}
+
+.checkMarkSuccess, .checkMarkFailed{
+    position: relative;
+}
+.checkMarkSuccess::after{
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 98%;
+    color: var(--right-color);
+
+}
+
+.checkMarkFailed::after{
+    content: "\f06a";
+    font-family: 'FontAwesome';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 98%;
+    color: var(--wrong-color);
+
+}
+
+/**========================== START MODAL====================== */
+.box-conent {
+    width: fit-content;
+    z-index: 10;
+    top: 40%;
+}
+.circles span {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.circles span:nth-child(1) {
+    background-color: var(--wrong-color);
+}
+
+.circles span:nth-child(2) {
+    background-color: #febe2e;
+}
+
+.circles span:nth-child(3) {
+    background-color: var(--right-color);
+}
+
+.modal p{
+    font-size: 1.2rem;
+    font-family: "Bree Serif", serif;
+}
+
+.modal li{
+    font-size: 1.1rem;
+    line-height: 27px;
+    color: var(--main-font-color);
+}
+
+
+/**========================== END MODAL====================== */
+
+
+
