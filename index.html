@@ -1,44 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookMarker</title>
 
-    <link rel="icon" href="./images/bookmark.png">
+    <title>BookMarks</title>
 
-    <!--?=================================  Bree-Font=================================  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bree+Serif&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
-    <!--?=================================  Bree-Font=================================  -->
-
-
-    <!--?=================================  Pacifico-Font=================================  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
-        rel="stylesheet">
-    <!--?=================================  Pacifico-Font=================================  -->
-
-
-    <!--?================================= Pt Sans Caption-Font =================================  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
-        rel="stylesheet">
-    <!--?=================================  Pt Sans Caption-Font =================================  -->
-
-    <!--?=================================  Righteous-Font =================================  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
-        rel="stylesheet">
-    <!--?=================================  Righteous-Font =================================  -->
+    <link rel="icon" href="./assets/images/favicon.ico">
 
     <!--? ================================STYLESHEETS=====================================  -->
     <link rel="stylesheet" href="CSS/all.min.css">
@@ -49,15 +18,26 @@
 </head>
 
 <body >
-
 <!--*======================START HEADING-SECTION==========================  -->
+
+    
+
     <section class="heading-section  text-center py-5">
         <div class="container position-relative">
             <div class="heading-content">
 
-                <h1 class="m-auto mb-5">Bookmarker</h1>
-                <h2 class="pt-5 dashed-line"><i class="fa-solid bookmark-icon  fa-bookmark px-2 "></i> Bookmark your favorite sites
-                    <i class=" fa-solid bookmark-icon  fa-bookmark px-2 "></i></h2> 
+               <div class="headeing d-flex gap-4 align-items-center justify-content-center text-center">
+                   <h1>Bookmarker</h1>
+                  <div class="mode-item modeToggleBtn" id="modeToggleBtn"> 
+                    <i class="far  fa-moon fs-2 w-100" ></i>
+                  </div>
+               </div>
+                <h2 class="pt-5 dashed-line">
+                    <i class="fa-solid bookmark-icon  fa-bookmark px-2 "></i> 
+                       Bookmark your favorite sites
+                    <i class=" fa-solid bookmark-icon  fa-bookmark px-2 "></i>
+                </h2> 
+
             </div>
 
         </div>
@@ -65,17 +45,9 @@
 <!--*======================END HEADING-SECTION==========================  -->
 
 <!--*======================START INPUTING-SECTION==========================  -->
-    <section class="input-section">
-        <div class="container d-flex flex-column position-relative dashed-line">
-            <label for="site-name"class="mb-2 fw-bold"  ><i class="pe-2 fa-solid fa-book-bookmark"></i>Site Name</label>
-            <div id="checkIdName" class="check-input" ><input  id="site-name" oninput="checkName()"  class="site-name-class form-control mb-4" type="text" placeholder="Bookmark Name"></div>
-
-            <label for="site-url" class="mb-2 fw-bold" ><i class="pe-2 fa-solid fa-link"></i>Site URL</label>
-            <div id="checkIdUrl" class="check-input" ><input id="site-url" oninput="checkUrl()"  class="site-url-class form-control mb-4" type="text" placeholder="Website URL"></div>
-            
-            <div id="changing-btn"  class="m-auto position-relative"><button onclick="addNewProcut()" class="changedButton btn btn-danger  ">Submit</button></div>
-            
-
+    <section class="data-of-table-inputs-section" >
+        <div class="container d-flex flex-column position-relative dashed-line" id="inputSectionContainer">
+          <!-- Inputs for Urls data to make Table -->
         </div>
     </section>
 <!--*======================END INPUTING-SECTION==========================  -->
@@ -84,22 +56,113 @@
 <!--*======================START DATA-SECTION==========================  -->
     <section class="data-section py-5">
             <div class="container">
-                <input oninput="searchForElement(this.value.toLowerCase())" id="search-input" class=" form-control mb-4 w-100 m-auto "  type="search" placeholder="Search">
-                <table class="bg-white m-auto text-center w-100">
-                    <thead>
-                       <tr>
-                        <th class="py-2">index</th>
-                        <th>Website Name</th>
-                        <th>Visit</th>
-                        <th>Update</th>
-                        <th>Delete</th>
-                       </tr>
+
+              <div class="input-group mb-4" id="search-input-parent">
+
+                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" id="search-input" placeholder="Select category, hit enter OR click in search button">
+                <button type="button" class="btn btn-warning rounded-end-3 order-1" id="search-btn">Search</button>
+                
+                <select class="form-select" style="width: fit-content; max-width: fit-content;" id="select-input">
+                  <option value="all">All</option>
+
+                  <optgroup label="By Webstie">
+                    <option  value="elementOrder">Line Number</option>
+                    <option  value="websiteName" selected>Name</option>
+                    <option  value="websiteURL">Url</option>
+                    <option  value="websiteCategory">Category</option>
+                  </optgroup>
+     
+                </select>
+  
+              </div>
+              
+
+                <div class="saving-toolbar" id="save-to-file-toolbar">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="m-0">Your Bookmarks</h4>
+                    <div class="btn-group">
+                      <button class="btn btn-outline-success" id="exportCsv">CSV</button>
+                      <button class="btn btn-outline-info" id="exportJson">JSON</button>
+                      <button class="btn btn-outline-secondary" id="exportTxt">TXT</button>
+                    </div>
+                  </div>
+                </div>
+
+                <table class="m-auto text-center w-100">
+
+                    <thead id="table-head">
+                        <tr>
+
+                              <th> 
+                                <div class="elmentOrder-table-head  d-flex align-items-center justify-content-center gap-2">
+                                    <h6>index</h6>
+                                    <div class="btn-group dropup ">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                            <li id="asc-elementOrder">Ascending</li>
+                                            <li id="desc-elementOrder">Descending</li>
+                                          </ul>
+                                    </div>
+                                </div>
+                              </th>
+
+                              <th>
+                                <div class="websiteName-table-head  d-flex align-items-center justify-content-center gap-2">
+                                    <h6>Website Name</h6>
+                                    <div class="btn-group dropup">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                            <li id="asc-websiteName">Ascending</li>
+                                            <li id="desc-websiteName">Descending</li>
+                                          </ul>
+                                    </div>
+                                </div>
+                               
+                              </th>
+
+                              <th >
+                                 <div class="websiteCategory-table-head py-2 d-flex align-items-center justify-content-center gap-3">
+                                    <h6>Category</h6>
+                                    <div class="btn-group dropup">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                            <li id="asc-websiteCategory">Ascending</li>
+                                            <li id="desc-websiteCategory">Descending</li>
+                                          </ul>
+                                    </div>
+                                 </div>
+                               
+                              </th>
+
+                              <th> Visit </th>
+                              <th> Update </th>
+                              <th> Delete </th>
+                              
+                        </tr>
                     </thead>
 
-                    <tbody id="data-rows">
-                      
+                    <tbody id="filteredDataTableBody" class="d-none">
+                        <tr id="noDataRow" class="d-none">
+                            <td colspan="5"  rowspan="10"  class="text-center text-muted py-4">
+                              <i class="fa-regular fa-circle-xmark me-2"></i>
+                              No data to display
+                            </td>
+                        </tr>
+                    </tbody>
 
-                    
+                    <tbody id="allDataTableBody" class="">
+                       <tr id="noDataRow" class="d-none">
+                            <td colspan="5" rowspan="10" class="text-center text-muted py-4">
+                              <i class="fa-regular fa-circle-xmark me-2"></i>
+                              No data to display
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -108,8 +171,8 @@
 
 <!--*======================START MODAL==========================  -->
 
-    <dialog class=" box-conent my-modal position-absolute start-0 top-0  border-0 rounded-2">
-      <div>
+  <dialog class="box-conent" >
+     
         <div class=" box-header  d-flex justify-content-between align-items-center mb-4">
           <div class="modal-header circles d-flex flex-row border-0">
             <span class="rounded-circle me-2 "></span>
@@ -120,34 +183,35 @@
             <i  class="fa fa-xmark fs-3"></i>
           </button>
         </div>
+
         <p class="m-0 pb-2 fw-bold">
           Site Name or Url is not valid, Please follow the rules below :
         </p>
-        <ol class="rules list-unstyled m-0">
-          <li>
-            <i class="fa-regular text-danger fa-circle-right pe-2"></i>Site name must
-            contain at least 3 characters ex: (Example)
+        <ol class="rules list-unstyled m-0 d-none">
+          <li class="nameLine">
+            <i class="fa-regular text-danger fa-circle-right pe-2" ></i>Url name must
+              contain at least 3 characters ex: (Bee)
           </li>
-          <li>
-            <i class="fa-regular text-danger fa-circle-right pe-2"></i>Site URL must be a
+          <li class="urlLine">
+            <i class="fa-regular text-danger fa-circle-right pe-2" ></i>Site URL must be a
             valid one ex: (https://www.example.com)
           </li>
+          <li class="categoryLine">
+            <i class="fa-regular text-danger fa-circle-right pe-2" ></i>Catgory Must be Desciptive ex:(Social)</li>
         </ol>
-      </div>
-      
-    </dialog>
+  </dialog>
+
 <!--*======================END MODAL==========================  -->
 
-    <!--! ==========================================SCRIPTING==============================  -->
-    <script src="./JS/all.min.js"></script>
-    <script src="./JS/bootstrap.bundle.min.js"></script>
-    <script src="./JS/main.js"></script>
-    <!--! ==========================================SCRIPTING==============================  -->
+
+<!--! ==========================================SCRIPTING==============================  -->
+  <script src="./JS/all.min.js"></script>
+  <script src="./JS/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./JS/main.js"></script>
+<!--! ==========================================SCRIPTING==============================  -->
 </body>
 
 </html>
 
 
 
-<!--  
- -->
