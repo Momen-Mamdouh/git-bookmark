@@ -50,6 +50,7 @@ Efficient DOM Updates: Optimizes performance by using document.createDocumentFra
 📈 Logic Flowchart
 This flowchart visualizes the application's core logic, detailing how user actions trigger data manipulation and UI updates.
 
+   graph TD
     A[Start Application] --> B(Initialize Data from localStorage);
     B --> C{Data Exists?};
     C -- Yes --> D(Render Table with allUrls);
@@ -99,7 +100,3 @@ This flowchart visualizes the application's core logic, detailing how user actio
         X --- Y
     end
 
-
-
-6- Animattion hadnels the (Flash_Effect , Button Pulse_Effect, Background_Gradient_Change_Effect) in qouteStyleSheet.css File.
-7- react-hot-toast to display some idication for user at interacting with the page
