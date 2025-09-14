@@ -18,14 +18,14 @@ Data Normalization: Data is normalized for efficient searching and manipulation,
 Efficient DOM Updates: Optimizes performance by using document.createDocumentFragment and only updating specific elements of the DOM, rather than re-rendering the entire table.
 
 ### 📸 Screenshot:
-![Dark_mode_Homepage](./screenshots/Dark_mode_HomePage.png)
-![Light_mode_Homepage](./screenshots/Light_mode_HomePage.png)
-![InValid_Data](./screenshots/inValid_Data.png)
-![Valid_Data](./screenshots/Valid_Data.png)
-![Searched_Table](./screenshots/Search_table.png)
-![Sorted_Table](./screenshots/sorted_table.png)
-![Add_Modal](./screenshots/Add_Modal.png)
-![Cancel_Update](./screenshots/Cancel_update.png)
+![Dark_mode_Homepage](./ScreenShots/Dark_mode_HomePage.png)
+![Light_mode_Homepage](./ScreenShots/Light_mode_HomePage.png)
+![InValid_Data](./ScreenShots/inValid_Data.png)
+![Valid_Data](./ScreenShots/Valid_Data.png)
+![Searched_Table](./ScreenShots/Search_table.png)
+![Sorted_Table](./ScreenShots/sorted_table.png)
+![Add_Modal](./ScreenShots/Add_Modal.png)
+![Cancel_Update](./ScreenShots/Cancel_update.png)
 
 # Tech Stack Used:
 1- Pure JavaScript which handles:
